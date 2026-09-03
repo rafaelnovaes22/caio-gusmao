@@ -2,6 +2,10 @@
 
 Site institucional em arquivo único (`index.html`). Trompetista e maestro: concertos, regência, aulas, casamentos e eventos.
 
+Produção: https://caio-gusmao-production.up.railway.app
+
+Deploy: Railway, projeto `caio-gusmao`, serviço ligado ao repo com Dockerfile nginx na porta 8080.
+
 ```powershell
 python -m http.server 8000
 ```
