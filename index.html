@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Caio Gusmão, trompetista e maestro</title>
+<meta name="description" content="Trompetista e maestro: concertos, regência, aulas de trompete e eventos. Contrate para sua festa, casamento ou projeto.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#12100c;--sm:#1c1913;--ink:#f6efe2;--mut:#c8bda6;--br:#d9a441;--ln:rgba(246,239,226,.15);--rd:20px}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--ink);font-family:Archivo,system-ui,sans-serif;margin:0;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;background:radial-gradient(55rem 28rem at 85% -5%,rgba(217,164,65,.16),transparent);pointer-events:none}
+::selection{background:var(--br);color:#12100c}
+img{display:block;max-width:100%}
+a{color:inherit}
+.d{font-family:"Instrument Serif",serif;font-weight:400;line-height:1.02}
+.pl{position:fixed;inset:0;z-index:200;background:#0d0b08;display:flex;align-items:flex-end;justify-content:space-between;padding:5vw;transition:opacity .7s ease,visibility .7s}
+.pl.g{opacity:0;visibility:hidden}
+.pl b{font-family:"Instrument Serif",serif;font-size:clamp(3rem,11vw,8rem);line-height:1}
+.pl b i{font-style:normal;color:var(--br)}
+.pl span{font-size:.8rem;letter-spacing:.35em;text-transform:uppercase;color:var(--mut)}
+.hd{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:1.1rem 4vw;border-bottom:1px solid transparent;transition:background .35s,border-color .35s}
+.hd.f{background:rgba(18,16,12,.86);backdrop-filter:blur(14px);border-color:var(--ln)}
+.hd-l{font-family:"Instrument Serif",serif;font-size:1.5rem;text-decoration:none}
+.hd-l i{font-style:normal;color:var(--br)}
+.hd-n{display:flex;gap:2rem}
+.hd-n a{text-decoration:none;font-size:.82rem;letter-spacing:.22em;text-transform:uppercase;color:var(--mut)}
+.hd-n a:hover{color:var(--br)}
+.hd-c{background:var(--br);color:#12100c;border:0;border-radius:999px;padding:.8rem 1.6rem;font-weight:700;font-size:.82rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;cursor:pointer;font-family:inherit}
+.hd-m{display:none;background:none;border:0;color:var(--ink);font-size:1.6rem;cursor:pointer}
+.hro{position:relative;min-height:100svh;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;background:radial-gradient(80rem 40rem at 50% 110%,rgba(217,164,65,.22),transparent),#12100c}
+.hro-x{position:relative;padding:0 4vw 4vh}
+.hro-s{display:inline-block;font-size:.78rem;letter-spacing:.4em;text-transform:uppercase;color:var(--br);border:1px solid rgba(217,164,65,.55);border-radius:999px;padding:.55rem 1.2rem;margin-bottom:1.4rem}
+.hro-t{font-size:clamp(3.2rem,11vw,10rem);margin:0}
+.hro-t em{color:var(--br)}
+.hro-p{max-width:34rem;color:#ece4d2;font-size:clamp(1rem,1.6vw,1.2rem);line-height:1.6}
+.hro-a{display:flex;gap:1rem;flex-wrap:wrap;margin-top:1.8rem}
+.bt{display:inline-block;border-radius:999px;padding:1rem 2.1rem;font-weight:700;font-size:.85rem;letter-spacing:.14em;text-transform:uppercase;text-decoration:none;cursor:pointer;border:1px solid transparent;font-family:inherit}
+.bt1{background:var(--br);color:#12100c}
+.bt1:hover{transform:translateY(-2px)}
+.bt2{border-color:var(--ln);color:var(--ink)}
+.bt2:hover{border-color:var(--br);color:var(--br)}
+.hro-f{position:relative;display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--ln);margin-top:3rem}
+.hro-f div{padding:1.2rem 4vw 1.6rem;border-left:1px solid var(--ln)}
+.hro-f div:first-child{border-left:0;padding-left:0}
+.hro-f b{font-family:"Instrument Serif",serif;font-size:clamp(1.5rem,2.6vw,2.2rem);display:block;font-weight:400}
+.hro-f span{font-size:.75rem;letter-spacing:.25em;text-transform:uppercase;color:var(--mut)}
+.mq{border-top:1px solid var(--ln);border-bottom:1px solid var(--ln);overflow:hidden;background:var(--br);color:#12100c;padding:.9rem 0}
+.mq-t{display:flex;gap:3rem;width:max-content;animation:mq 22s linear infinite;font-family:"Instrument Serif",serif;font-size:1.15rem;white-space:nowrap}
+@keyframes mq{to{transform:translateX(-50%)}}
+.mn{padding:16vh 4vw;max-width:90rem}
+.mn p{font-family:"Instrument Serif",serif;font-size:clamp(1.7rem,4.2vw,3.2rem);line-height:1.3;margin:0}
+.mn em{color:var(--br)}
+.sc{padding:10vh 4vw}
+.sc-h{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;border-bottom:1px solid var(--ln);padding-bottom:1.2rem;margin-bottom:3rem}
+.sc-h h2{font-family:"Instrument Serif",serif;font-weight:400;font-size:clamp(2.2rem,5.5vw,4rem);margin:0}
+.sc-h span{color:var(--mut);font-size:.8rem;letter-spacing:.3em;text-transform:uppercase}
+.sv-g{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem}
+.cd{background:var(--sm);border:1px solid var(--ln);border-radius:var(--rd);padding:2rem;transition:transform .35s,border-color .35s}
+.cd:hover{transform:translateY(-6px);border-color:rgba(217,164,65,.6)}
+.cd n{font-family:"Instrument Serif",serif;color:var(--br);font-size:1rem;letter-spacing:.15em}
+.cd h3{font-size:1.35rem;margin:.9rem 0 .6rem}
+.cd p{color:var(--mut);line-height:1.65;margin:0 0 1.4rem}
+.cd f{display:flex;justify-content:space-between;align-items:center;border-top:1px solid var(--ln);padding-top:1.1rem}
+.cd f a{font-size:.78rem;letter-spacing:.2em;text-transform:uppercase;color:var(--br);text-decoration:none;font-weight:700}
+.ag{background:var(--sm);border:1px solid var(--ln);border-radius:calc(var(--rd) + 6px);margin:0 4vw;padding:4rem 3.5rem;display:grid;grid-template-columns:1fr 1fr;gap:3rem}
+.ag h2{font-family:"Instrument Serif",serif;font-weight:400;font-size:clamp(2.2rem,4.5vw,3.4rem);margin:0 0 1rem}
+.ag p{color:var(--mut);line-height:1.7}
+.fm label{display:block;font-size:.75rem;letter-spacing:.25em;text-transform:uppercase;color:var(--mut);margin:1.1rem 0 .5rem}
+.fm input,.fm select,.fm textarea{width:100%;box-sizing:border-box;background:#12100c;border:1px solid var(--ln);border-radius:14px;color:var(--ink);padding:1rem;font-size:1rem;font-family:inherit}
+.fm input:focus,.fm select:focus,.fm textarea:focus{outline:none;border-color:var(--br)}
+.fm button{margin-top:1.6rem;width:100%}
+.fq-i{border-bottom:1px solid var(--ln)}
+.fq-q{width:100%;background:none;border:0;color:var(--ink);display:flex;justify-content:space-between;align-items:center;padding:1.5rem 0;font-size:1.1rem;font-weight:600;cursor:pointer;text-align:left;font-family:inherit}
+.fq-q i{font-style:normal;color:var(--br);font-size:1.5rem;transition:transform .3s}
+.fq-i.o .fq-q i{transform:rotate(45deg)}
+.fq-a{max-height:0;overflow:hidden;transition:max-height .4s ease;color:var(--mut);line-height:1.7}
+.fq-a p{margin:0 0 1.5rem;max-width:44rem}
+.ft{padding:12vh 4vw 2rem;border-top:1px solid var(--ln);margin-top:10vh}
+.ft-g{font-family:"Instrument Serif",serif;font-size:clamp(2.8rem,11vw,10rem);margin:0}
+.ft-g em{color:var(--br)}
+.ft-r{display:grid;grid-template-columns:repeat(3,1fr);gap:2rem;margin:3rem 0;padding:2rem 0;border-top:1px solid var(--ln);border-bottom:1px solid var(--ln)}
+.ft-r h4{font-size:.75rem;letter-spacing:.3em;text-transform:uppercase;color:var(--mut);margin:0 0 1rem}
+.ft-r p,.ft-r a{line-height:2;color:var(--ink);text-decoration:none}
+.ft-b{display:flex;justify-content:space-between;gap:1rem;flex-wrap:wrap;color:var(--mut);font-size:.85rem}
+.rv{opacity:0;transform:translateY(36px);transition:opacity .8s ease,transform .8s ease}
+.rv.on{opacity:1;transform:none}
+@media(max-width:960px){.hd-n{display:none}.hd-m{display:block}.hd-n.o{display:flex;position:fixed;inset:0;background:#12100c;flex-direction:column;align-items:center;justify-content:center;gap:2rem}.sv-g{grid-template-columns:1fr}.ag{grid-template-columns:1fr}.hro-f{grid-template-columns:repeat(2,1fr)}.hro-f div:nth-child(3){border-left:0;padding-left:0}.ft-r{grid-template-columns:1fr}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.001s !important;transition-duration:.001s !important}html{scroll-behavior:auto}.rv{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<div class="pl" id="pl"><span>Trompete e regência</span><b><i id="pln">0</i>%</b></div>
+<header class="hd" id="hd">
+<a class="hd-l" href="#topo">CAIO <i>GUSMÃO</i></a>
+<nav class="hd-n" id="hdn">
+<a href="#sobre">Sobre</a>
+<a href="#atuacao">Atuação</a>
+<a href="#aulas">Aulas</a>
+<a href="#contato">Contato</a>
+</nav>
+<a class="hd-c" href="#contato">Contratar</a>
+<button class="hd-m" id="hdm" aria-label="Abrir menu">☰</button>
+</header>
+<section class="hro" id="topo">
+<div class="hro-x">
+<span class="hro-s">Trompetista e maestro</span>
+<h1 class="hro-t d">O trompete <em>no centro.</em></h1>
+<p class="hro-p">Concertos, regência, aulas e eventos. Música com técnica, presença e aquele brilho que só o metal tem.</p>
+<div class="hro-a">
+<a class="bt bt1" href="#contato">Contratar</a>
+<a class="bt bt2" href="#aulas">Aulas de trompete</a>
+</div>
+<div class="hro-f">
+<div><b>Palco</b><span>concertos e shows</span></div>
+<div><b>Batuta</b><span>regência</span></div>
+<div><b>Aulas</b><span>todos os níveis</span></div>
+<div><b>Eventos</b><span>casamentos e festas</span></div>
+</div>
+</div>
+</section>
+<div class="mq" aria-hidden="true"><div class="mq-t" id="mqt">
+<span>Concertos •</span><span>Regência •</span><span>Aulas de trompete •</span><span>Casamentos •</span><span>Eventos corporativos •</span><span>Workshops •</span>
+</div></div>
+<section class="mn rv" id="sobre">
+<p>Trompetista e maestro, Caio Gusmão transita entre <em>o palco e a sala de aula.</em> Do repertório erudito ao popular, o trabalho é um só: música bem tocada, bem ensinada e bem dirigida.</p>
+</section>
+<section class="sc" id="atuacao">
+<div class="sc-h rv"><h2 class="d">Atuação</h2><span>o que eu faço</span></div>
+<div class="sv-g">
+<article class="cd rv"><n>I</n><h3>Concertos e shows</h3><p>Apresentações solo ou com grupos, do erudito ao popular, para teatros, festivais e eventos privados.</p><f><span></span><a href="#contato">Contratar →</a></f></article>
+<article class="cd rv"><n>II</n><h3>Regência</h3><p>Direção musical de grupos, bandas e orquestras, com preparação de repertório e ensaios.</p><f><span></span><a href="#contato">Conversar →</a></f></article>
+<article class="cd rv"><n>III</n><h3>Casamentos e festas</h3><p>Trompete ao vivo na cerimônia, na recepção ou na pista. Repertório sob medida com os noivos.</p><f><span></span><a href="#contato">Reservar data →</a></f></article>
+<article class="cd rv"><n>IV</n><h3>Eventos corporativos</h3><p>Recepções, lançamentos e confraternizações com trilha ao vivo e presença de palco.</p><f><span></span><a href="#contato">Orçamento →</a></f></article>
+<article class="cd rv"><n>V</n><h3>Gravações</h3><p>Trompete para faixas, trilhas e produções em estúdio, presencial ou remoto.</p><f><span></span><a href="#contato">Pedir →</a></f></article>
+<article class="cd rv"><n>VI</n><h3>Workshops</h3><p>Masterclasses de trompete e prática de conjunto para escolas e festivais de música.</p><f><span></span><a href="#contato">Agendar →</a></f></article>
+</div>
+</section>
+<section class="sc" id="aulas">
+<div class="sc-h rv"><h2 class="d">Aulas de trompete</h2><span>do zero ao palco</span></div>
+<div class="sv-g">
+<article class="cd rv"><n>01</n><h3>Iniciante</h3><p>Embocadura, respiração, primeiras notas e leitura. Instrumento afinado com o aluno desde a aula um.</p><f><span></span><a href="#contato">Começar →</a></f></article>
+<article class="cd rv"><n>02</n><h3>Intermediário</h3><p>Técnica, escalas, articulação e repertório. Preparação para bandas, vestibular e concursos.</p><f><span></span><a href="#contato">Evoluir →</a></f></article>
+<article class="cd rv"><n>03</n><h3>Avançado</h3><p>Performance, interpretação e rotina profissional de estudo para quem vive de música.</p><f><span></span><a href="#contato">Aprofundar →</a></f></article>
+</div>
+</section>
+<section class="sc" id="contato">
+<div class="sc-h rv"><h2 class="d">Contato</h2><span>resposta rapidinha</span></div>
+</section>
+<div class="ag rv">
+<div>
+<h2 class="d">Vamos fazer <em>música juntos?</em></h2>
+<p>Preencha e caia direto no WhatsApp com a mensagem pronta. Diga o que precisa: show, aula, regência ou evento.</p>
+<p><b style="color:var(--br)">Contratos, aulas e parcerias.</b><br>Resposta em horário comercial.</p>
+</div>
+<form class="fm" id="fm">
+<label for="fn">Seu nome</label>
+<input id="fn" type="text" placeholder="Como podemos chamar você" required autocomplete="name">
+<label for="fs">Assunto</label>
+<select id="fs"><option>Contratar show</option><option>Regência e direção musical</option><option>Casamento ou festa</option><option>Aulas de trompete</option><option>Gravação em estúdio</option><option>Outro</option></select>
+<label for="fms">Detalhe</label>
+<textarea id="fms" rows="3" placeholder="Data, cidade, tipo de evento"></textarea>
+<button class="bt bt1" type="submit">Enviar no WhatsApp →</button>
+</form>
+</div>
+<section class="sc">
+<div class="sc-h rv"><h2 class="d">Dúvidas comuns</h2><span>faq</span></div>
+<div class="rv">
+<div class="fq-i"><button class="fq-q">Quanto custa um show ou casamento?<i>+</i></button><div class="fq-a"><p>Depende de data, cidade, duração e formação. Manda os detalhes no zap que o orçamento sai fechado e sem surpresa.</p></div></div>
+<div class="fq-i"><button class="fq-q">Preciso ter trompete para começar as aulas?<i>+</i></button><div class="fq-a"><p>Não para a primeira conversa. Na aula experimental a gente avalia e eu indico o instrumento certo para seu bolso e objetivo.</p></div></div>
+<div class="fq-i"><button class="fq-q">Você viaja para tocar?<i>+</i></button><div class="fq-a"><p>Sim. Custo de deslocamento e hospedagem entram no orçamento de forma transparente.</p></div></div>
+<div class="fq-i"><button class="fq-q">Dá aula online?<i>+</i></button><div class="fq-a"><p>Sim, com câmera boa e material de apoio. O resultado é o mesmo do presencial para a maioria dos níveis.</p></div></div>
+</div>
+</section>
+<footer class="ft">
+<h2 class="ft-g d">Que comece <em>a música.</em></h2>
+<div class="ft-r">
+<div><h4>Atuação</h4><p>Concertos e shows<br>Regência<br>Aulas de trompete</p></div>
+<div><h4>Fale</h4><p><a href="https://wa.me/5511999990000" target="_blank" rel="noopener">WhatsApp</a><br><a href="#topo">Voltar ao topo ↑</a></p></div>
+<div><h4>Segue</h4><p><a href="#" rel="noopener">Instagram</a><br><a href="#" rel="noopener">YouTube</a><br>Novidade e agenda</p></div>
+</div>
+<div class="ft-b"><span>© <i id="yr">2026</i> Caio Gusmão.</span><span>Trompete e regência.</span></div>
+</footer>
+<script>
+(function(){
+"use strict";
+var $=function(s,c){return (c||document).querySelector(s)};
+var $$=function(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))};
+var pl=$("#pl"),pln=$("#pln"),n=0;
+var rm=window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+function hidePl(){pl.classList.add("g");document.body.style.overflow="";setTimeout(function(){pl.remove()},800)}
+if(rm){hidePl()}else{document.body.style.overflow="hidden";var t=setInterval(function(){n=Math.min(100,n+Math.ceil(Math.random()*14));pln.textContent=n;if(n>=100){clearInterval(t);setTimeout(hidePl,250)}},110)}
+var hd=$("#hd"),hdn=$("#hdn");
+window.addEventListener("scroll",function(){hd.classList.toggle("f",window.scrollY>40)},{passive:true});
+$("#hdm").addEventListener("click",function(){hdn.classList.toggle("o")});
+$$("#hdn a").forEach(function(a){a.addEventListener("click",function(){hdn.classList.remove("o")})});
+var mqt=$("#mqt");mqt.innerHTML+=mqt.innerHTML;
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("on");io.unobserve(e.target)}})},{threshold:.12});
+$$(".rv").forEach(function(el){io.observe(el)});
+$$(".fq-i").forEach(function(it){var q=$(".fq-q",it),a=$(".fq-a",it);q.addEventListener("click",function(){var open=it.classList.contains("o");$$(".fq-i.o").forEach(function(o){o.classList.remove("o");$(".fq-a",o).style.maxHeight="0"});if(!open){it.classList.add("o");a.style.maxHeight=a.scrollHeight+"px"}})});
+$("#fm").addEventListener("submit",function(e){e.preventDefault();var msg="Olá! Sou "+$("#fn").value+", assunto: "+$("#fs").value+". "+$("#fms").value;window.open("https://wa.me/5511999990000?text="+encodeURIComponent(msg),"_blank")});
+$("#yr").textContent=new Date().getFullYear();
+})();
+</script>
+</body>
+</html>
