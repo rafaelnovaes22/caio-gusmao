@@ -1,1 +1,25 @@
-{"personalData":[{"basis":"consentimento","field":"nome","purpose":"agendamento via WhatsApp","retention":"transitorio no link wa.me"},{"basis":"consentimento","field":"whatsapp","purpose":"canal de resposta do atelier","retention":"conversa WhatsApp"},{"basis":"consentimento","field":"melhor dia","purpose":"agendamento da prova","retention":"transitorio no link wa.me"}],"project":"caio-gusmao"}
+{
+  "personalData": [
+    {
+      "basis": "consentimento",
+      "field": "nome",
+      "purpose": "identificação em solicitação artística, após habilitação do contato",
+      "retention": "transitorio no link wa.me"
+    },
+    {
+      "basis": "consentimento",
+      "field": "whatsapp",
+      "purpose": "canal de resposta para shows, aulas e direção musical",
+      "retention": "conversa WhatsApp"
+    },
+    {
+      "basis": "consentimento",
+      "field": "detalhes do evento",
+      "purpose": "contextualização de pedido artístico",
+      "retention": "transitorio no link wa.me"
+    }
+  ],
+  "project": "caio-gusmao",
+  "collectionStatus": "disabled",
+  "currentCollection": "Formulário desabilitado. Nenhum pedido é enviado ou armazenado. Os campos abaixo documentam a finalidade prevista antes de ativar um contato verificado."
+}

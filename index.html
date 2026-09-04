@@ -167,17 +167,17 @@ a{color:inherit}
 <div class="ag rv">
 <div>
 <h2 class="d">Vamos fazer <em>música juntos?</em></h2>
-<p>Preencha e caia direto no WhatsApp com a mensagem pronta. Diga o que precisa: show, aula, regência ou evento.</p>
+<p>O formulário está indisponível enquanto o canal de atendimento é confirmado.</p>
 <p><b style="color:var(--br)">Contratos, aulas e parcerias.</b><br>Resposta em horário comercial.</p>
 </div>
-<form class="fm" id="fm">
+<form class="fm" id="fm" aria-describedby="contact-status">
 <label for="fn">Seu nome</label>
-<input id="fn" type="text" placeholder="Como podemos chamar você" required autocomplete="name">
+<input disabled id="fn" type="text" placeholder="Como podemos chamar você" required autocomplete="name">
 <label for="fs">Assunto</label>
-<select id="fs"><option>Contratar show</option><option>Regência e direção musical</option><option>Casamento ou festa</option><option>Aulas de trompete</option><option>Gravação em estúdio</option><option>Outro</option></select>
+<select disabled id="fs"><option>Contratar show</option><option>Regência e direção musical</option><option>Casamento ou festa</option><option>Aulas de trompete</option><option>Gravação em estúdio</option><option>Outro</option></select>
 <label for="fms">Detalhe</label>
-<textarea id="fms" rows="3" placeholder="Data, cidade, tipo de evento"></textarea>
-<button class="bt bt1" type="submit">Enviar no WhatsApp →</button>
+<textarea disabled id="fms" rows="3" placeholder="Data, cidade, tipo de evento"></textarea>
+<button class="bt bt1" type="submit" disabled>Contato indisponível</button>
 </form>
 </div>
 <section class="sc">
@@ -190,11 +190,12 @@ a{color:inherit}
 </div>
 </section>
 <footer class="ft">
+<p id="contact-status" role="status" tabindex="-1" data-contact-status="unavailable">Contato temporariamente indisponível. Este site não está recebendo pedidos ou agendamentos.</p>
 <h2 class="ft-g d">Que comece <em>a música.</em></h2>
 <div class="ft-r">
 <div><h4>Atuação</h4><p>Concertos e shows<br>Regência<br>Aulas de trompete</p></div>
-<div><h4>Fale</h4><p><a href="https://wa.me/5511999990000" target="_blank" rel="noopener">WhatsApp</a><br><a href="#topo">Voltar ao topo ↑</a></p></div>
-<div><h4>Segue</h4><p><a href="#" rel="noopener">Instagram</a><br><a href="#" rel="noopener">YouTube</a><br>Novidade e agenda</p></div>
+<div><h4>Fale</h4><p><a href="#contact-status" aria-disabled="true" rel="noopener">Contato indisponível</a><br><a href="#topo">Voltar ao topo ↑</a></p></div>
+<div><h4>Segue</h4><p>Instagram e YouTube<br>Canais em confirmação</p></div>
 </div>
 <div class="ft-b"><span>© <i id="yr">2026</i> Caio Gusmão.</span><span>Trompete e regência.</span></div>
 </footer>
@@ -215,14 +216,14 @@ var mqt=$("#mqt");mqt.innerHTML+=mqt.innerHTML;
 var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("on");io.unobserve(e.target)}})},{threshold:.12});
 $$(".rv").forEach(function(el){io.observe(el)});
 $$(".fq-i").forEach(function(it){var q=$(".fq-q",it),a=$(".fq-a",it);q.addEventListener("click",function(){var open=it.classList.contains("o");$$(".fq-i.o").forEach(function(o){o.classList.remove("o");$(".fq-a",o).style.maxHeight="0"});if(!open){it.classList.add("o");a.style.maxHeight=a.scrollHeight+"px"}})});
-$("#fm").addEventListener("submit",function(e){e.preventDefault();var msg="Olá! Sou "+$("#fn").value+", assunto: "+$("#fs").value+". "+$("#fms").value;window.open("https://wa.me/5511999990000?text="+encodeURIComponent(msg),"_blank")});
+$("#fm").addEventListener("submit",function(e){e.preventDefault();document.getElementById("contact-status").focus()});
 $("#yr").textContent=new Date().getFullYear();
 })();
 </script>
 <script>
 (function(){
 "use strict";
-var A="#d9a441",WA="5511999990000";
+var A="#d9a441";
 var KB=[
 {k:["show","contratar","contrato","orçamento","orcamento","preço","preco","valor","quanto"],a:"Manda data, cidade e tipo de evento no zap que o orçamento sai fechado."},
 {k:["aula","aprender","estudar","curso","aluno"],a:"Do zero ao avançado, presencial ou online. Chama e marca a experimental."},
@@ -231,7 +232,7 @@ var KB=[
 {k:["online"],a:"Sim, com câmera boa e material de apoio."},
 {k:["regência","regencia","maestro","orquestra","banda"],a:"Direção musical de grupos e bandas. Descreva o projeto no zap."}
 ];
-var FB='Não sei ainda. <a href="https://wa.me/'+WA+'" target="_blank" rel="noopener">Chama no zap</a> que respondemos.';
+var FB="O contato está temporariamente indisponível. Nenhuma mensagem foi enviada.";
 var G="Olá! Pergunte sobre shows, aulas, casamentos ou regência.";
 var css="#wxb{position:fixed;right:1.2rem;bottom:1.2rem;z-index:150;width:60px;height:60px;border-radius:50%;border:0;background:"+A+";color:#111;font-size:1.5rem;cursor:pointer;font-family:inherit;box-shadow:0 8px 30px rgba(0,0,0,.4)}#wxp{position:fixed;right:1.2rem;bottom:5.2rem;z-index:150;width:min(350px,90vw);background:#151515;color:#f5f5f5;border:1px solid rgba(255,255,255,.15);border-radius:18px;overflow:hidden;display:none;flex-direction:column}#wxp.on{display:flex}#wxh{padding:.9rem 1.1rem;font-weight:800;font-size:.8rem;letter-spacing:.15em;text-transform:uppercase;background:"+A+";color:#111;display:flex;justify-content:space-between;align-items:center}#wxx{cursor:pointer}#wxm{padding:1rem 1.1rem;max-height:300px;overflow-y:auto;display:flex;flex-direction:column;gap:.6rem;font-size:.92rem;line-height:1.55}#wxm .u{align-self:flex-end;background:rgba(255,255,255,.12);border-radius:12px 12px 3px 12px;padding:.6rem .9rem;max-width:85%}#wxm .b{align-self:flex-start;background:rgba(255,255,255,.07);border-radius:12px 12px 12px 3px;padding:.6rem .9rem;max-width:90%}#wxm a{color:"+A+"}#wxf{display:flex;border-top:1px solid rgba(255,255,255,.12)}#wxi{flex:1;background:none;border:0;color:#f5f5f5;padding:.9rem 1rem;font-size:.95rem;font-family:inherit;outline:none;min-width:0}#wxs{background:none;border:0;color:"+A+";font-size:1.3rem;padding:0 1rem;cursor:pointer}";
 var st=document.createElement("style");st.textContent=css;document.head.appendChild(st);

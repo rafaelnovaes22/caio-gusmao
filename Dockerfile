@@ -2,6 +2,7 @@
 # Porta 8080 fixa, igual à variável PORT do serviço e ao target do domínio.
 FROM nginx:1.27-alpine
 COPY index.html /usr/share/nginx/html/index.html
+COPY guardrails.js /usr/share/nginx/html/guardrails.js
 COPY nginx.conf /etc/nginx/conf.d/default.conf
 EXPOSE 8080
 CMD ["nginx", "-g", "daemon off;"]

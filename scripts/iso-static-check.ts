@@ -4,6 +4,7 @@
 import { readFileSync, existsSync } from "node:fs";
 import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
+import { contactIssues } from "./contact-policy.mjs";
 
 type Issue = { file: string; problem: string; fix: string };
 const issues: Issue[] = [];
@@ -65,13 +66,13 @@ const html: string = readFileSync(htmlPath, "utf8");
   if (hasWhatsapp && !/whatsapp/i.test(mapRaw)) issues.push({ file: "governance/data-map.json", problem: "wa.me no codigo sem cobertura no mapa", fix: "mapear whatsapp com finalidade agendamento" });
   if (hasForm && !/nome/i.test(mapRaw)) issues.push({ file: "governance/data-map.json", problem: "form coleta nome sem mapeamento", fix: "mapear nome com base consentimento" });
   if (hasEmail && !/email/i.test(mapRaw)) issues.push({ file: "governance/data-map.json", problem: "email no codigo sem mapeamento", fix: "mapear email ou remover" });
-  if (hasForm && !/WhatsApp/i.test(html)) issues.push({ file: "index.html", problem: "form sem aviso de destino WhatsApp", fix: "informar que envia para WhatsApp" });
+  for (const problem of contactIssues(html)) issues.push({ file: "index.html", problem, fix: "configurar contato verificado ou fechar coleta com aviso explícito" });
 }
 
 // CLAUSULA (outcome verificavel: titulo, CTA, conversao whatsapp)
 {
   if (!/<title>[^<]{10,}<\/title>/.test(html)) issues.push({ file: "index.html", problem: "title ausente ou curto", fix: "declarar outcome no title" });
-  if (!/wa\.me\//.test(html)) issues.push({ file: "index.html", problem: "sem conversao whatsapp", fix: "adicionar CTA com wa.me" });
+  // A indisponibilidade só passa quando o contrato acima comprova ausência de coleta e destino.
   const ctas: number = (html.match(/class="bt bt1"/g) ?? []).length;
   if (ctas === 0) issues.push({ file: "index.html", problem: "sem CTA primario", fix: "adicionar botao bt1" });
 }
