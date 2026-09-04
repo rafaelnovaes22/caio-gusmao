@@ -39,7 +39,8 @@ check("render", "render: doctype, title, description, hero", () => {
 check("links", "links: internos resolvem, wa.me presente, sem http quebrado", () => {
   const hrefs = [...html.matchAll(/href="([^"]+)"/g)].map((m) => m[1]);
   const srcs = [...html.matchAll(/src="([^"]+)"/g)].map((m) => m[1]);
-  if (!hrefs.some((h) => h.includes("wa.me/"))) throw new Error("sem link wa.me");
+  const unavailable = html.includes('data-contact-status="unavailable"');
+  if (!unavailable && !hrefs.some((h) => h.includes("wa.me/"))) throw new Error("sem contato ou estado indisponivel");
   const bad = hrefs.filter((h) => h.startsWith("http://"));
   if (bad.length > 0) throw new Error("link http inseguro: " + bad[0]);
   for (const s of srcs) {
@@ -56,6 +57,10 @@ check("form", "form: existe, campos required, submit gera wa.me", () => {
   if (!html.includes("<form")) throw new Error("sem form");
   if (!html.includes("required")) throw new Error("sem campo required");
   if (!html.includes('id="fm"')) throw new Error("sem form fm");
+  if (html.includes('data-contact-status="unavailable"')) {
+    if (!html.includes('type="submit" disabled')) throw new Error("form indisponivel permite envio");
+    return "contato indisponivel com envio desabilitado";
+  }
   if (!html.includes("encodeURIComponent") || !html.includes("wa.me/")) throw new Error("submit nao monta wa.me");
   return "form fm com required e wa.me ok";
 });
