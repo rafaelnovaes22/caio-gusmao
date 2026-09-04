@@ -49,8 +49,8 @@ jobs:
           node-version: "22"
       - run: node scripts/guardrails-check.mjs
   break-gate:
-    name: break before prod (merge/deploy so se verde)
+    name: resultado dos guardrails locais
     runs-on: ubuntu-latest
     needs: [guardrails, injection, hallucination, cost]
     steps:
-      - run: echo 'GATES VERDES - merge liberado, deploy liberado com poll ate SUCCESS'
+      - run: echo 'Guardrails locais passaram. O gate de entrega exige também os demais jobs do workflow ci.'
