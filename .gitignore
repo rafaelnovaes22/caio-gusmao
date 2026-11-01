@@ -1,0 +1,17 @@
+.vercel
+.env*
+
+# padronizacao 2026-10-31
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
+.reflex/
+coverage/
+.next/
+dist/
+.output/
